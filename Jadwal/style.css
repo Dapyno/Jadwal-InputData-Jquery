@@ -102,7 +102,6 @@ th {
     margin-left: 5px;
 }
 
-/* Modal di tengah layar */
 .modal {
     position: fixed;
     top: 0;
@@ -156,4 +155,5 @@ th {
 @keyframes fadeIn {
     from { transform: scale(0.9); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
+
 }
