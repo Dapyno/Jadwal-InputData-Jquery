@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jadwal Rutinitas</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Jadwal Rutinitas</h1>
+    <div class="form-group">
+        <input type="time" id="waktu" required>
+        <input type="text" id="kegiatan" placeholder="Kegiatan..." required>
+        <button id="tambah">Tambah</button>
+        <button id="simpan" style="display:none;">Simpan Perubahan</button>
+        <button id="reset" class="reset-btn">Reset Semua</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Jam</th>
+                <th>Kegiatan</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody id="jadwal-list"></tbody>
+    </table>
+</div>
+
+<div class="modal" id="resetModal">
+    <div class="modal-content">
+        <h2>Hapus Semua Jadwal?</h2>
+        <p>Semua data akan hilang dan tidak bisa dikembalikan.</p>
+        <div class="modal-actions">
+            <button id="confirmReset" class="danger">Ya, Hapus</button>
+            <button id="cancelReset">Batal</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
