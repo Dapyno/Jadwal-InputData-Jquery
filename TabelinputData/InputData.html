@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Input Data</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="StyleData.css">
+</head>
+<body>
+
+  <h2>Input Data User</h2>
+
+  <form id="dataForm" autocomplete="off" novalidate>
+    <input type="text" id="nama" placeholder="Nama" required>
+    <input type="number" id="usia" placeholder="Usia" required>
+    <input type="number" id="berat" placeholder="Berat (kg)" required>
+    <input type="number" id="tinggi" placeholder="Tinggi (cm)" required>
+    <button type="submit">Simpan Data</button>
+    <button type="button" id="resetAllBtn">Reset Semua</button>
+  </form> 
+
+  <h3>Data Tersimpan</h3>
+  <table id="dataTable">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Nama</th>
+        <th>Usia</th>
+        <th>Berat (kg)</th>
+        <th>Tinggi (cm)</th>
+        <th>Edit/Hapus Data</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div class="modal" id="alertModal">
+    <div class="modal-content">
+      <h3 id="modalText">Isi semua data yaa!</h3>
+      <div class="modal-actions">
+        <button class="cancel" id="closeModal">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-small" id="resetModal">
+    <div class="modal-content">
+      <h3>Hapus semua data?</h3>
+      <div class="modal-actions">
+        <button class="danger" id="confirmReset">Ya</button>
+        <button class="cancel" id="cancelReset">Tidak</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="ScriptData.js"></script>
+</body>
+</html>
