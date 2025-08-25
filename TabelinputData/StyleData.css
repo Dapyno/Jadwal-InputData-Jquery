@@ -1,58 +1,77 @@
 body {
-  font-family: 'Georgia', serif;
+  font-family: 'Arial', serif;
   background-color: #ece9e1;
   color: #2e2a26;
   margin: 40px auto;
   max-width: 900px;
+  padding: 0 20px;
 }
 
 form {
   background-color: #fdfcf8;
   padding: 20px 25px;
   border: 1px solid #b0a89f;
-  border-radius: 8px;
-  box-shadow: 0 3px 6px rgba(80, 70, 60, 0.15);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(80, 70, 60, 0.15);
   margin-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 15px;
 }
 
 form input {
   flex: 1 1 45%;
-  padding: 10px;
-  font-size: 14px;
+  padding: 12px;
+  font-size: 15px;
   border: 1px solid #b8b0a7;
-  border-radius: 6px;
+  border-radius: 8px;
   background-color: #f7f6f2;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 form input:focus {
-  border-color: #7c6f64;
+  border-color: #5e544d;
+  box-shadow: 0 0 4px rgba(94, 84, 77, 0.4);
   outline: none;
 }
 
-form button {
+form .action-buttons {
   flex: 1 1 100%;
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+form button {
+  flex: 1;
   padding: 12px 18px;
   font-size: 15px;
   border: none;
-  border-radius: 6px;
-  background-color: #7c6f64;
+  border-radius: 8px;
   color: #fff;
-  margin-top: 10px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
   cursor: pointer;
 }
 
 form button:hover {
-  background-color: #5e544d;
+  transform: translateY(-2px);
+}
+
+form .submit-btn {
+  background: linear-gradient(135deg, #6d8c74, #506d59); /* Hijau zaitun soft */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+form .submit-btn:hover {
+  background: linear-gradient(135deg, #506d59, #3d5446);
 }
 
 #resetAllBtn {
   background: linear-gradient(135deg, #ff5f6d, #c31432);
-  margin-bottom: 20px;
+}
+
+#resetAllBtn:hover {
+  background: linear-gradient(135deg, #c31432, #a21026);
 }
 
 table {
@@ -60,8 +79,8 @@ table {
   border-collapse: collapse;
   background-color: #fdfcf8;
   border: 1px solid #c8c2b9;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(60, 50, 40, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(60, 50, 40, 0.1);
   overflow: hidden;
 }
 
@@ -89,11 +108,15 @@ td {
 td button {
   padding: 6px 12px;
   font-size: 13px;
-  border-radius: 4px;
+  border-radius: 6px;
   color: #fff;
   border: none;
-  margin: 0 3px;
-  transition: background-color 0.3s ease;
+  margin: 0 4px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+td button:hover {
+  transform: scale(1.05);
 }
 
 td button.edit-button {
@@ -156,12 +179,18 @@ td button.delete-button:hover {
 }
 
 .modal-actions button {
-  padding: 8px 14px;
+  padding: 10px 16px;
+  font-size: 14px;
   font-weight: bold;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   color: #fff;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-actions button:hover {
+  transform: translateY(-2px);
 }
 
 .modal-actions .danger {
